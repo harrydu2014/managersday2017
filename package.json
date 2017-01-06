@@ -1,28 +1,35 @@
 {
-	"name": "managersday2017",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"prestart": "npm install",
-		"start": "node app.js",
-		"test": "npm run jshint && (npm run codecov || true)",
-		"jshint": "jshint --exclude ./node_modules/"
-	},
-	"dependencies": {
-		"express": "4.13.x",
-		"cfenv": "1.0.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/harrydu2014/managersday2017.git"
-	},
-	"contributors": [
-	    {
-	      "name": "Harry Du",
-	      "email": "dumingy@cn.ibm.com"
-	    }
-	],
-	"engines": {
-		"node": "4.x"
-	} 
+  "name": "managersday2017",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "prestart": "npm install",
+    "start": "node app.js",
+    "test": "npm run jshint && (npm run codecov || true)",
+    "jshint": "jshint --exclude ./node_modules/"
+  },
+  "dependencies": {
+    "cfenv": "1.0.x",
+    "express": "4.13.x",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrydu2014/managersday2017.git"
+  },
+  "contributors": [
+    {
+      "name": "Harry Du",
+      "email": "dumingy@cn.ibm.com"
+    }
+  ],
+  "engines": {
+    "node": "4.x"
+  }
 }
