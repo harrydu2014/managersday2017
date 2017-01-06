@@ -3,13 +3,25 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node app.js"
+		"prestart": "npm install",
+		"start": "node app.js",
+		"test": "npm run jshint && (npm run codecov || true)",
+		"jshint": "jshint --exclude ./node_modules/"
 	},
 	"dependencies": {
 		"express": "4.13.x",
 		"cfenv": "1.0.x"
 	},
-	"repository": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/harrydu2014/managersday2017.git"
+	},
+	"contributors": [
+	    {
+	      "name": "Harry Du",
+	      "email": "dumingy@cn.ibm.com"
+	    }
+	],
 	"engines": {
 		"node": "4.x"
 	} 
