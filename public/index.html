@@ -2,25 +2,78 @@
 <html>
 
   <head>
-    <title>NodeJS Starter Application</title>
+    <title>Managers Day BR</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">    
     <link rel="stylesheet" href="assets/home.css">
   </head>
-
   <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello ManagersDay!123123</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
+    <div class="container">
+      <p class="mdBR-home-logo">
+        <img src="images/Brasil100_small_white.png">
+      </p>        
+      <!-- <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </form> -->
+      <form class="form-signin">
+        <div class="form-group">
+          <label for="inputName" class="sr-only">Your Name</label>
+          <input type="text" id="inputName" class="form-control" placeholder="Your Name" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+            <option>Rio de Janeiro</option>
+            <option>São Paul</option>
+          </select>
+        </div>        
+        <div class="form-group">   
+          <p>Confirm attendance?</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">YES</button>
+          <button class="btn btn-block">No</button>
+        </div>
+      </form>
+      <p class="text-success">Tips: please use your employee serial as password :-)</p>
+    </div><!-- /.container -->
   </body>
   <script src="assets/home.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>
