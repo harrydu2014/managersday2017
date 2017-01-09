@@ -2,3 +2,6 @@
 	width: 100%;
 	margin: 20px 0;
 }
+.container .form-group button.mdBR-home-NoBtn {
+	background-color: #cccccc;	
+}
