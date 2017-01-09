@@ -18,22 +18,21 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            }
-            // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader!css-loader') },
-            // { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-            // { test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=5000" },
-            // { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-            // { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
+            },
+            { test: /\.(woff|woff2)$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+            { test: /\.ttf$/, loader: "file-loader" },
+            { test: /\.eot$/, loader: "file-loader" },
+            { test: /\.svg$/, loader: "file-loader" }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("[name].css"),
         //new ExtractTextPlugin("[name]-[contenthash].css")
-        // new webpack.ProvidePlugin({   
-        //     jQuery: 'jquery',
-        //     $: 'jquery',
-        //     jquery: 'jquery'
-        // }),
+        new webpack.ProvidePlugin({   
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+        })
         //new webpack.optimize.UglifyJsPlugin()
     ]
 };
