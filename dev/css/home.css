@@ -1,7 +1,17 @@
-.container p.mdBR-home-logo img{
+#md-home .container p.mdBR-home-logo img{
 	width: 100%;
 	margin: 20px 0;
 }
-.container .form-group button.mdBR-home-NoBtn {
+#md-home .container .form-group button.mdBR-home-NoBtn {
 	background-color: #cccccc;	
+}
+#md-list .container p.mdBR-list-logo img{
+	width: 100%;
+	margin: 20px 0;
+}
+#md-list .mdBR-list-container {
+	margin-top: 30px;
+}
+#md-list .container .col-xs-4 {
+	text-align: right;
 }

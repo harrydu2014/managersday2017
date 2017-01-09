@@ -44,13 +44,17 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
 	__webpack_require__(1);
 	__webpack_require__(10);
 	__webpack_require__(12);
 	var $ = __webpack_require__(14);
 
-	$('h1').css({ color: 'red'});
-	console.log('Harrytest');
+	$('.md-form-signin').submit(function(e){
+		e.preventDefault();
+		window.location.href = '/list.html';
+		return false;
+	});
 
 /***/ },
 /* 1 */
