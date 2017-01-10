@@ -6,6 +6,6 @@ var $ = require('./../../node_modules/jquery/dist/jquery.min');
 
 $('.md-form-signin').submit(function(e){
 	e.preventDefault();
-	window.location.href = '/list.html';
+	console.log('HarryTest');
 	return false;
 });
