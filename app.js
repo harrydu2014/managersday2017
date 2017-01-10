@@ -12,7 +12,7 @@ var express = require('express'),
 	logger = require('morgan'),
 	errorHandler = require('errorhandler'),
 	multipart = require('connect-multiparty'),
-	multipartMiddleware = multipart();
+	multipartMiddleware = multipart(),
 	app = express(),
 	db,
 	cloudant,
