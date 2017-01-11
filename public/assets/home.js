@@ -50,11 +50,11 @@
 	__webpack_require__(12);
 	var $ = __webpack_require__(14);
 
-	$('.md-form-signin').submit(function(e){
-		e.preventDefault();
-		console.log('HarryTest');
-		return false;
-	});
+	// $('.md-form-signin').submit(function(e){
+	// 	e.preventDefault();
+	// 	console.log('HarryTest');
+	// 	return false;
+	// });
 
 /***/ },
 /* 1 */

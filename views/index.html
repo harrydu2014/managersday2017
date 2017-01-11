@@ -14,25 +14,25 @@
       <p class="mdBR-home-logo">
         <img src="images/Brasil100_wide_white.png" alt="Managers' day wide logo">
       </p>        
-      <form class="md-form-signin">
+      <form class="md-form-signin" action="/signin" method="POST">
         <div class="form-group">
           <label for="inputName" class="sr-only">Your Name</label>
-          <input type="text" id="inputName" class="form-control" placeholder="Your Name" required autofocus>
+          <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Your Name" required autofocus>
         </div>
         <div class="form-group">
           <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+          <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required>
         </div>
         <div class="form-group">
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
         </div>
         <div class="form-group">
           <label for="inputJobtitle" class="sr-only">Job title</label>
-          <input type="text" id="inputJobtitle" class="form-control" placeholder="Job title" required>
+          <input type="text" id="inputJobtitle" name="inputJobtitle" class="form-control" placeholder="Job title" required>
         </div>
         <div class="form-group">
-          <select class="form-control">
+          <select class="form-control" name="inputLocation">
             <option value="RIO">Your location: Rio de Janeiro</option>
             <option value="SP">Your location: São Paul</option>
           </select>
