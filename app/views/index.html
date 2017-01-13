@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">    
-    <link rel="stylesheet" href="assets/home.css">
+    <link rel="stylesheet" href="assets/assets.css">
   </head>
   <body id="md-home">
     <div class="container">
       <p class="mdBR-home-logo">
         <img src="images/Brasil100_wide_white.png" alt="Managers' day wide logo">
-      </p>        
-      <form class="md-form-signin" action="/signin" method="GET">
+      </p>
+      <form id="SigninForm" class="md-form-signin" action="/signin" method="GET">
         <div class="form-group">
           <label for="inputName" class="sr-only">Your Name</label>
           <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Your Name" required autofocus>
@@ -33,20 +33,29 @@
         </div>
         <div class="form-group">
           <select class="form-control" name="inputLocation">
-            <option value="RIO">Your location: Rio de Janeiro</option>
+            <option value="RJ">Your location: Rio de Janeiro</option>
             <option value="SP">Your location: São Paul</option>
           </select>
         </div>        
-        <div class="form-group">   
+        <div class="form-group">    
           <p>Confirm attendance?</p>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block mdBR-home-YesBtn" type="submit">YES</button>
+          <input type="hidden" id="inputConfirm" name="inputConfirm" value="">
+          <button class="btn btn-primary btn-block mdBR-home-YesBtn">YES</button>
           <button class="btn btn-block mdBR-home-NoBtn">No</button>
         </div>
       </form>
       <p class="text-success">Tips: please use your employee serial as password :-)</p>
+      <div id="mdBR-pop" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+          123
+          </div>
+        </div>
+      </div>
     </div><!-- /.container -->
   </body>
-  <script src="assets/home.js"></script>
+  <script src="assets/assets.js"></script>
+<!--   <script src="dev/js/home.js"></script> -->
 </html>

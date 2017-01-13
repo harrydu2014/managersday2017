@@ -1,23 +1,50 @@
-/*eslint-env node*/
+'use strict';
 
-//------------------------------------------------------------------------------
-// node.js starter application for Bluemix
-//------------------------------------------------------------------------------
+var express = require('express'),
+    session = require('express-session'),
+    path = require('path'),
+	cfenv = require('cfenv'),
+	CloudantStore = require('connect-cloudant')(session),
+	bodyParser = require('body-parser'),
+	methodOverride = require('method-override'),
+	logger = require('morgan'),
+	errorHandler = require('errorhandler'),
+	//multipart = require('connect-multiparty'),
+	//multipartMiddleware = multipart(),
+	config = require('./config.json'),
+	app = express();
 
-// This application uses express as its web server
-// for more info, see: http://expressjs.com
-var express = require('express');
+app.set('views', __dirname + '/app/views');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.use(logger('dev'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+app.use(methodOverride());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// cfenv provides access to your Cloud Foundry environment
-// for more info, see: https://www.npmjs.com/package/cfenv
-var cfenv = require('cfenv');
+// development only
+if ('development' == app.get('env')) {
+    app.use(errorHandler());
+    app.locals.pretty = true;
+}
 
-// create a new express server
-var app = express();
+//initialize express session
+var cloudantStore = new CloudantStore({
+	url: config.cloudantURL,
+	databaseName: 'sessions'
+});
+app.use(session({
+	secret: 'cloudant',
+	resave: false,
+	saveUninitialized: true,
+    store: cloudantStore,
+    cookie: {maxAge:24*60*60*1000}
+}));
 
-// serve the files out of ./public as our main files
-app.use(express.static(__dirname + '/public'));
-
+require('./routes/router')(app);
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 

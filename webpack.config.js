@@ -2,7 +2,7 @@ var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
-        home: "dev/js/home"
+        assets: "dev/js/lib"
     },
     output: {
         path: "public/assets",
@@ -33,6 +33,7 @@ module.exports = {
             $: 'jquery',
             jquery: 'jquery'
         })
+        //,
         //new webpack.optimize.UglifyJsPlugin()
     ]
 };

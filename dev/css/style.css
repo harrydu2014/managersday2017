@@ -1,3 +1,4 @@
+/*Home Page*/
 #md-home .container p.mdBR-home-logo img{
 	width: 100%;
 	margin: 20px 0;
@@ -5,12 +6,13 @@
 #md-home .container .form-group button.mdBR-home-NoBtn {
 	background-color: #cccccc;	
 }
+/*List Page*/
 #md-list .container p.mdBR-list-logo img{
 	width: 100%;
 	margin: 20px 0;
 }
 #md-list .mdBR-list-container {
-	margin-top: 30px;
+	margin: 15px auto;
 }
 #md-list .container .col-xs-4 {
 	text-align: right;
