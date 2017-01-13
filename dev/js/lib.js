@@ -15,6 +15,7 @@ $(function() {
 				}
 			}).done(function(results) {
 				console.log(results.data);
+				if(results.data == 3) window.location.href = '/list';
 			});
 		},
 		setValue: function(obj, value){

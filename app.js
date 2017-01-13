@@ -1,10 +1,11 @@
 'use strict';
 
 var express = require('express'),
+	cookieParser = require('cookie-parser'),
     session = require('express-session'),
     path = require('path'),
 	cfenv = require('cfenv'),
-	CloudantStore = require('connect-cloudant')(session),
+	//CloudantStore = require('connect-cloudant')(session),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
 	logger = require('morgan'),
@@ -30,17 +31,16 @@ if ('development' == app.get('env')) {
     app.use(errorHandler());
     app.locals.pretty = true;
 }
-
 //initialize express session
-var cloudantStore = new CloudantStore({
-	url: config.cloudantURL,
-	databaseName: 'sessions'
-});
+// var cloudantStore = new CloudantStore({
+// 	url: config.cloudantURL,
+// 	databaseName: config.cloudantSESS
+// });
 app.use(session({
-	secret: 'cloudant',
+	secret: 'mdBR',
 	resave: false,
 	saveUninitialized: true,
-    store: cloudantStore,
+    //store: cloudantStore,
     cookie: {maxAge:24*60*60*1000}
 }));
 

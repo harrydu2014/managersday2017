@@ -21,13 +21,12 @@ exports.signin = function(req, res){
 			"password": _user.inputPassword
 		}
 	};
-	console.log(query);
-	console.log('=============='+Date.now());
 	db.find(query, function(err, result) {
 	    if(err) return res.json({data:0});
 	    if(!err){
 	    	if(result.docs.length >0){
 	    		req.session.user = _user;
+	    		console.log(req.session.user);
 	    		doc._rev = result.docs[0]._rev;
 		    	doc.username = _user.inputName;
 		    	doc.email = decodeURIComponent(_user.inputEmail);
@@ -51,8 +50,9 @@ exports.list = function(req, res){
 }
 exports.signinRequired = function(req,res,next) {
 	var _user = req.session.user;
+	console.log(req.session);
 	if(!_user) {
-	return res.redirect('/');
+		return res.redirect('/');
 	}
 	next();
 };

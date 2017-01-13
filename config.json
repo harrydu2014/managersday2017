@@ -2,5 +2,6 @@
     "cloudantURL" : "https://cedcfb63-fa41-4162-94b2-b24503eea99f-bluemix:a04392a3f712b7a501845c1e03eb802f8a2949466d81e31533af99b29970e24e@cedcfb63-fa41-4162-94b2-b24503eea99f-bluemix.cloudant.com",
     "cloudantDBNAME" : "md_users",
     "cloudantHOST": "cedcfb63-fa41-4162-94b2-b24503eea99f-bluemix.cloudant.com",
-  	"cloudantPORT": 443
+  	"cloudantPORT": 443,
+  	"cloudantSESS" : "md_sessions"
 }
