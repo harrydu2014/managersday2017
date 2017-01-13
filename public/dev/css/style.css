@@ -12,9 +12,12 @@
 	color: #ffffff;
 }
 #md-Modal button.md-close {
-	background-color: #7690c6 !important;
-	color: #ffffff !important;
-	border: none !important;
+	background-color: #7690c6;
+	color: #ffffff;
+	border: none;
+}
+#md-Modal .modal-dialog {
+	margin-top: 50% !important;
 }
 /*List Page*/
 #md-list .container p.mdBR-list-logo img{

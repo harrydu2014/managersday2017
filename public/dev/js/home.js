@@ -1,8 +1,4 @@
 'use strict';
-require("./../../node_modules/bootstrap/dist/css/bootstrap.min.css");
-require("css/style.css");
-require('./../../node_modules/bootstrap/dist/js/bootstrap.min');
-var $ = require('./../../node_modules/jquery/dist/jquery.min');
 $(function() {
 	var signObject = {
 		signIn: function(obj){
@@ -18,13 +14,16 @@ $(function() {
 				if(results.data == 3) window.location.href = '/list';
 				switch (results.data){
 					case 0:
-						$('#myModal').modal('show');
+						$('#md-Modal').modal('show');
+						$('#md-Modal .modal-body').html('Sorry, there\'re something wrong :-(<br/>Please try again.');
 						break;
 					case 1:
-						$('#myModal').modal('show');
+						$('#md-Modal').modal('show');
+						$('#md-Modal .modal-body').html('Sorry, can\' update your profile in the list. :-(<br/>Please try again.');
 						break;
 					case 2:
-						$('#myModal').modal('show');
+						$('#md-Modal').modal('show');
+						$('#md-Modal .modal-body').html('Sorry, you\'re not in the list. :-(<br/>Please check your email and password.');
 						break;
 					case 3: 
 						window.location.href = '/list';

@@ -24,6 +24,7 @@ exports.signin = function(req, res){
 	db.find(query, function(err, result) {
 	    if(err) return res.json({data:0});
 	    if(!err){
+	    	console.log(result);
 	    	if(result.docs.length >0){
 	    		req.session.user = _user;
 	    		console.log(req.session.user);
