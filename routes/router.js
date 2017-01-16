@@ -5,7 +5,11 @@ module.exports = function(app){
 		app.locals.user = req.session.user;
 		next();
 	});
+	//User routes
 	app.get('/', User.index);
 	app.get('/signin', User.signin);
 	app.get('/list', User.signinRequired, User.list);
+	//Admin routes
+	app.get('/admin', User.adminRequired, User.admin);
+	//app.get('/admin', User.admin);
 }

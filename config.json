@@ -3,5 +3,6 @@
     "cloudantDBNAME" : "md_users",
     "cloudantHOST": "cedcfb63-fa41-4162-94b2-b24503eea99f-bluemix.cloudant.com",
   	"cloudantPORT": 443,
-  	"cloudantSESS" : "md_sessions"
+  	"cloudantSESS" : "md_sessions",
+  	"cloudantADMIN" : "md_admin"
 }
