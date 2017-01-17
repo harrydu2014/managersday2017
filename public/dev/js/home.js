@@ -28,6 +28,9 @@ $(function() {
 					case 3: 
 						window.location.href = '/list';
 						break;
+					case 4: 
+						debugger;window.location.href = '/admin';
+						break;
 				}
 			});
 		},

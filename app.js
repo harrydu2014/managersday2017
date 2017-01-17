@@ -18,6 +18,7 @@ var express = require('express'),
 app.set('views', __dirname + '/app/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+app.locals.moment = require('moment');
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
     extended: true
